@@ -46,10 +46,11 @@ combined = combined.merge(
     right_index=True
 )
 
-# Team name mapping
+# A custom dictionary to handle missing keys
 class MissingDict(dict):
     __missing__ = lambda self, key: key
-
+    
+# Mapping team names to their common names
 mapping = MissingDict(**{
     "Brighton and Hove Albion": "Brighton",
     "Manchester United": "Manchester Utd",
